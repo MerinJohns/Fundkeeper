@@ -1,0 +1,133 @@
+authentication
+
+schema:User
+
+attributes:[username,email,password]
+
+1)api for creating user account
+
+    url: http://127.0.0.1:8000/api/register/
+
+    method: POST
+
+    body: {
+        username
+        email
+        password
+    }
+
+
+===========================================================================
+
+schema: Expense
+
+attributes: [id,title,amount,category,user_object,priority,created_date]
+
+
+1) api for listing all expenses
+
+    url: http://127.0.0.1:8000/api/expenses/
+
+    method: GET
+
+    body: nill
+
+    authorization: {username,password} Basic Authentication 
+
+2)api for adding a new expense
+
+    url: http://127.0.0.1:8000/api/expenses/
+
+    method: POST
+
+    body: {title,amount,category,priority}
+
+    authorization : Basic Authentication
+
+3) api for fetching expense detail 
+
+    url: http://127.0.0.1:8000/api/expenses/{id}/
+
+    method: GET
+
+    body: nill
+
+    authorization : Basic 
+    
+4) api for updating expense detail 
+
+    url: http://127.0.0.1:8000/api/expenses/{id}/
+
+    method: PUT
+
+    body: {title,amount,category,priority}
+
+    authorization : Basic Authentication
+
+5) api for deleting expense detail 
+
+    url: http://127.0.0.1:8000/api/expenses/{id}/
+
+    method: DELETE
+
+    body: nill
+
+    authorization : Basic Authentication
+
+
+===========================================================================
+
+schema: Income
+
+attributes: [title,amount,category,created_date]
+
+
+1) api for listing all incomes
+
+    url: http://127.0.0.1:8000/api/incomes/
+
+    method: GET
+
+    body: nill
+
+    authorization: {username,password} Basic Authentication 
+
+2)api for adding a new incomes
+
+    url: http://127.0.0.1:8000/api/incomes/
+
+    method: POST
+
+    body: {title,amount,category}
+
+    authorization : Basic Authentication
+
+3) api for fetching incomes detail 
+
+    url: http://127.0.0.1:8000/api/incomes/{id}/
+
+    method: GET
+
+    body: nill
+
+    authorization : Basic 
+    
+4) api for updating incomes
+
+    url: http://127.0.0.1:8000/api/incomes/{id}/
+
+    method: PUT
+
+    body: {title,amount,category}
+
+    authorization : Basic Authentication
+
+5) api for deleting incomes 
+
+    url: http://127.0.0.1:8000/api/incomes/{id}/
+
+    method: DELETE
+
+    body: nill
+
+    authorization : Basic Authentication
